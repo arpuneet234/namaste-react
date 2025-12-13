@@ -1,0 +1,25 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "this is live course",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arpuneet234/namaste-react.git"
+  },
+  "author": "Puneet Arora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arpuneet234/namaste-react/issues"
+  },
+  "homepage": "https://github.com/arpuneet234/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.16.3"
+  },
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  }
+}
