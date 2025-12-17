@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "this is live course",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -16,6 +18,8 @@
   },
   "homepage": "https://github.com/arpuneet234/namaste-react#readme",
   "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "parcel": "^2.16.3"
   },
   "dependencies": {
