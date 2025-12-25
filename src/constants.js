@@ -1,41 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const title = (
-  <a href="/">
-    <img
-      className="logo"
-      alt="logo"
-      src="https://logos-world.net/wp-content/uploads/2020/11/Swiggy-Logo.png"
-    ></img>
-  </a>
-);
-
-const HeaderComponent = () => {
-  return (
-    <div className="header">
-      {title}
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-const burgerKing = {
-  name: "Burger King",
-  image:
-    "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/6/18/ee1fdf16-ea5f-4a44-9e58-7b3a9dee2618_8614.jpg",
-  cusine: ["burgers", "American"],
-  rating: "4.2 ",
-};
-
-const restaurantList = [
+export const restaurantList = [
   {
     type: "restaurant",
     data: {
@@ -217,42 +180,3 @@ const restaurantList = [
     },
   },
 ];
-
-const RestaurantCard = ({ name, image, cuisine, rating, deliveryTime }) => {
-  return (
-    <div className="card">
-      <img src={image}></img>
-      <h2>{name}</h2>
-      <h3>{cuisine.join(",")}</h3>
-      <h4>{rating}stars</h4>
-      <h4>{deliveryTime} To Deliver</h4>
-    </div>
-  );
-};
-
-const Body = () => {
-  return (
-    <div className="restaurant-list">
-      {restaurantList.map((restaurant) => {
-        return <RestaurantCard {...restaurant.data} key={restaurant.data.id} />;
-      })}
-    </div>
-  );
-};
-
-const Footer = () => {
-  return <h4>Footer</h4>;
-};
-
-const AppLayout = () => {
-  return (
-    <>
-      <HeaderComponent />
-      <Body />
-      <Footer />
-    </>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
