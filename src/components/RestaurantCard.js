@@ -1,11 +1,20 @@
-const RestaurantCard = ({ name, image, cuisine, rating, deliveryTime }) => {
+import { IMG_CDN_URL } from "../constants";
+
+const RestaurantCard = ({
+  name,
+  cloudinaryImageId,
+  cuisines,
+  avgRating,
+  deliveryTime,
+  sla,
+}) => {
   return (
     <div className="card">
-      <img src={image}></img>
+      <img src={IMG_CDN_URL + cloudinaryImageId}></img>
       <h2>{name}</h2>
-      <h3>{cuisine.join(",")}</h3>
-      <h4>{rating}stars</h4>
-      <h4>{deliveryTime} To Deliver</h4>
+      <h3>{cuisines?.join(", ")}</h3>
+      <h4>{avgRating} stars</h4>
+      <h4>{sla?.deliveryTime} mins to Deliver</h4>
     </div>
   );
 };
